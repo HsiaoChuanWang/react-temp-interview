@@ -1,9 +1,13 @@
 "use client";
+import Card from "./Card";
+import Modal from "./Modal";
+import { UserProvider } from "./userContext";
 
 export default function Home() {
-    return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            {/* ... */}
-        </main>
-    );
+  return (
+    <UserProvider>
+      <Card />
+      <Modal />
+    </UserProvider>
+  );
 }
